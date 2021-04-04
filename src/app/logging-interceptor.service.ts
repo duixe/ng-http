@@ -1,4 +1,5 @@
 import { HttpHandler, HttpInterceptor, HttpRequest, HttpEventType } from '@angular/common/http';
+import { tap } from 'rxjs/operators';
 
 export class LoggingInterceptorService implements HttpInterceptor{
     public intercept(req: HttpRequest<any>, next: HttpHandler) {
