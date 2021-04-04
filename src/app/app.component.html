@@ -24,7 +24,7 @@
           ></textarea>
         </div>
         <button
-          class="btn btn-primary"
+          class="btn btn-primary mt-4"
           type="submit"
           [disabled]="!postForm.valid"
         >
@@ -60,6 +60,11 @@
 
       </ul>
       <p *ngIf="isFetching">Loading...</p>
+      <div class="alert alert-danger" *ngIf="error">
+        <h3>An Error Occured!</h3>
+        <p>{{ error }}</p>
+        <button class="btn btn-danger" (click)="onHandleError()">Okay</button>
+      </div>
     </div>
   </div>
 </div>
